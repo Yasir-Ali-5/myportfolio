@@ -1,0 +1,29 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Award } from "lucide-react";
+
+export default function Certifications() {
+  const ref = useScrollReveal<HTMLDivElement>();
+  return (
+    <section id="certifications" className="py-0">
+      <div ref={ref} className="container mx-auto transition-all duration-700 opacity-0 translate-y-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-1"><span className="gradient-text">Certifications</span></h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="rounded-xl border bg-card p-3">
+            <div className="flex items-center gap-3 mb-1 text-foreground/85">
+              <Award className="text-accent" />
+              <p className="font-semibold">Artificial Intelligence & Machine Learning</p>
+            </div>
+            <p className="text-sm text-foreground/70">Medtronix Systems (2024)</p>
+          </div>
+          <div className="rounded-xl border bg-card p-3">
+            <div className="flex items-center gap-3 mb-1 text-foreground/85">
+              <Award className="text-accent" />
+              <p className="font-semibold">Computer Hardware & Networking</p>
+            </div>
+            <p className="text-sm text-foreground/70">VTI (2017)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
